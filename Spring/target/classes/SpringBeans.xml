@@ -1,0 +1,13 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="personaBean" class="com.beeva.app.saluda.Persona" >
+	<constructor-arg value="Charly"/>
+	</bean>
+	<bean id="saludador" class="com.beeva.app.saluda.Saludador" init-method="Saluda" scope="prototype">
+	<property name="persona" ref="personaBean"></property>
+	<property name="tiempo" value="Dias"></property>
+	</bean>
+
+</beans>

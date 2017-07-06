@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="cuenta" class="com.beeva.app.model.Cuenta" scope="prototype">
+	<property name="balance" value="200"></property>
+	<property name="tipoCuenta" value="1"></property>
+	</bean>
+	<bean id="cliente" class="com.beeva.app.model.Cliente" >
+	<property name="Nombre" value="Charly"></property>
+	<property name="Apellido" value="De La Rosa"></property>
+	<property name="cuenta" ref="cuenta"></property>
+	</bean>
+<!-- 	<bean id="banco" class="com.beeva.app.model.Banco" scope="prototype"> -->
+<!-- 	<property name="nclientes" value=""></property> -->
+<!-- 	</bean> -->
+	
+
+</beans>
