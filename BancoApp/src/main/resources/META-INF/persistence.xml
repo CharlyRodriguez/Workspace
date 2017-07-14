@@ -7,6 +7,8 @@
 	<persistence-unit name="springdemo">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>com.beeva.app.model.Cliente</class>
+		<class>com.beeva.app.model.Banco</class>
+		<class>com.beeva.app.model.Cuenta</class>
 	</persistence-unit>
 
 </persistence>
